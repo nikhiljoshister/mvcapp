@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: ngolla
@@ -14,6 +15,12 @@
 <h3>Welcome to Customer Form Page</h3>
 Please enter your details. <br><br>
 
-First Name:
+<form:form action="procesform" method="get" modelAttribute="theCustomer">
+    First Name: <form:input path="firstName"/><br><br>
+    Last Name: <form:input path="lastName"/><br><br>
+
+    <input type="submit"/>
+</form:form>
+
 </body>
 </html>

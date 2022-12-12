@@ -14,4 +14,9 @@ public class CustomerController {
     public String getCustomerForm(@ModelAttribute("theCustomer")Customer customer){
         return "customer-form";
     }
+
+    @GetMapping("/processform")
+    public String getProcessForm(@ModelAttribute("theCustomer")Customer customer){
+        return "process-form";
+    }
 }
